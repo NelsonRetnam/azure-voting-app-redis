@@ -1,6 +1,10 @@
 pipeline {
    agent any
 
+    environment {
+      PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Git\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\USER_NAME\\AppData\\Roaming\\npm;C:\Program Files\PowerShell\7"
+   }
+
    stages {
       stage('Verify Branch1') {
          steps {
@@ -21,3 +25,4 @@ pipeline {
       }
    }
 }
+
