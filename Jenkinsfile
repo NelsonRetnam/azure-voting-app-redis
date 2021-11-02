@@ -14,6 +14,7 @@ pipeline {
       stage('Docker Build') {
          steps {
             sh 'pwd'
+            sh 'docker images -a'
             pwsh 'docker images -a'
             // sh """ 
             //    cd azure-vote/
