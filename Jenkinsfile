@@ -1,14 +1,11 @@
 pipeline {
    agent any
 
- environment {
-      PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Git\\bin;C:\\Program Files\\nodejs\\;C:\\Users\\USER_NAME\\AppData\\Roaming\\npm\\;C:\\Program Files\\PowerShell\\7"
-   }
-   
-   stages {
+    stages {
       stage('Verify Branch') {
          steps {
             echo "$GIT_BRANCH"
+<<<<<<< HEAD
          }
       }
       stage('Docker Build') {
@@ -22,6 +19,9 @@ pipeline {
             //    docker images -a
             //    cd ...
             // """
+=======
+            sh 'echo "hello"'
+>>>>>>> b8a6ea96306ea2cbe28f0d191442ffdd050f2024
          }
       }
    }
