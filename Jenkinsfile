@@ -15,7 +15,6 @@ pipeline {
          steps {
             sh 'pwd'
             sh 'docker images -a'
-            pwsh 'docker images -a'
             // sh """ 
             //    cd azure-vote/
             //    docker images -a .
