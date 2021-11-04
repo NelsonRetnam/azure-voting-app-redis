@@ -3,9 +3,8 @@ pipeline {
 
     stages {
       stage('Verify Branch') {
-         steps {
+         steps {            
             echo "$GIT_BRANCH"
-<<<<<<< HEAD
          }
       }
       stage('Docker Build') {
@@ -19,9 +18,6 @@ pipeline {
             //    docker images -a
             //    cd ...
             // """
-=======
-            sh 'echo "hello"'
->>>>>>> b8a6ea96306ea2cbe28f0d191442ffdd050f2024
          }
       }
    }
