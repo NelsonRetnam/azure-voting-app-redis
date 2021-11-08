@@ -1,24 +1,10 @@
-pipeline {
-   agent any
-
-    stages {
-      stage('Verify Branch') {
-         steps {            
-            echo "$GIT_BRANCH"
-         }
+node {
+   stage('Echo on master'){
+      if(env.BRANCH_NAME == 'master'){
+         echo 'This is the master branch'
       }
-      stage('Docker Build') {
-         steps {
-            sh 'pwd'
-            sh 'docker images -a'
-            sh """ 
-               cd azure-vote/
-               docker images -a .
-               docker build -t jenkins-pipeline .
-               docker images -a
-               cd ..
-            """
-         }
+      else {
+         echo 'This is NOT the master branch'
       }
    }
 }
