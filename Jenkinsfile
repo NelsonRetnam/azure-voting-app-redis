@@ -4,7 +4,7 @@ node {
          echo 'This is the master branch'
       }
       else {
-         echo {$BRANCH_NAME}
+         echo env.BRANCH_NAME
          echo 'This is NOT the master branch'
       }
    }
